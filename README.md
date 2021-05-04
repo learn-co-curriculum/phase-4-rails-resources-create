@@ -1,4 +1,4 @@
-# Create Resource - Create
+# Rails Resource Routing: Create
 
 ## Learning Goals
 
