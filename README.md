@@ -56,6 +56,10 @@ This will download all the dependencies for our app and set up the database.
   </tr>
 </table>
 
+## Video Walkthrough
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/wuzfkmOCe_U?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+
 ## Creating New Birds
 
 As always, the first thing we'll need to do to add a new endpoint to our API is
