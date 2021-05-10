@@ -258,7 +258,7 @@ Experiment using Postman and `byebug`. What would you change if you wanted to
 add additional keys to the `params` hash? What would you expect the server to
 return if the new bird **wasn't** created successfully?
 
-## Summary
+## Conclusion
 
 We've now seen how to handle the `create` action, and take data from the
 **body** of a request using the `params` hash. When Rails receives a request
