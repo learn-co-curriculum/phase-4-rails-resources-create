@@ -135,7 +135,7 @@ fetch("http://localhost:3000/birds", {
 Let's make that request using Postman (remember to add `Content-Type`:
 `application/json` to the headers as well):
 
-![birds post request with postman](birds-post-request.png)
+![birds post request with postman](https://raw.githubusercontent.com/learn-co-curriculum/phase-4-rails-resources-create/master/birds-post-request.png)
 
 After making the request, we'll hit our `byebug` debugger, so we can see all the
 data about the request that we have access to:
