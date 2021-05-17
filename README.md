@@ -63,9 +63,9 @@ This will download all the dependencies for our app and set up the database.
 ## Creating New Birds
 
 As always, the first thing we'll need to do to add a new endpoint to our API is
-to update our routes. Following REST conventions, we'll want our clients to make
-a POST request to `/birds` to create a new bird. Using the `resources` method,
-we can create this route by adding in `create` to the list of actions we want
+update our routes. Following REST conventions, we'll want our clients to make a
+POST request to `/birds` to create a new bird. Using the `resources` method, we
+can create this route by adding in `create` to the list of actions we want
 handled:
 
 ```rb
@@ -104,9 +104,8 @@ end
 Run your server now with `rails s`.
 
 Now, we'll need to make a `POST /birds` with some data about the bird we're
-trying to create. Recall from our schema that our `birds` table has `name` and
-`species` columns, which we'll need to provide when creating a new `Bird`
-instance:
+trying to create. Recall from our schema that our `birds` table
+has `name` and `species` columns:
 
 ```rb
 create_table "birds", force: :cascade do |t|
@@ -117,7 +116,8 @@ create_table "birds", force: :cascade do |t|
 end
 ```
 
-If we were making this request using `fetch`, it'd look like this:
+To create a new `Bird` instance, we'll need to provide values for these two
+attributes. If we were making this request using `fetch`, it'd look like this:
 
 ```js
 fetch("http://localhost:3000/birds", {
@@ -218,7 +218,7 @@ def show
   # params[:id] refers to the dynamic part of our route, defined by :id
   # a request to /birds/2 would give params[:id] a value of 2
   bird = Bird.find_by(id: params[:id])
-  render json: { error: "Bird not found" }, status: :not_found
+  render json: bird
 end
 ```
 
