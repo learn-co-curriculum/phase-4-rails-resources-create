@@ -20,7 +20,7 @@ This will download all the dependencies for our app and set up the database.
 | HTTP Verb    | Path       | Controller#Action | Description            |
 | ------------ | ---------- | ----------------- | ---------------------- |
 | GET          | /birds     | birds#index       | Show all birds         |
-| POST         | /birds     | birds#create      | Create a new bird      |
+| **POST**     | **/birds** | **birds#create**  | **Create a new bird**  |
 | GET          | /birds/:id | birds#show        | Show a specific bird   |
 | PATCH or PUT | /birds/:id | birds#update      | Update a specific bird |
 | DELETE       | /birds/:id | birds#destroy     | Delete a specific bird |
@@ -191,10 +191,10 @@ def show
 end
 ```
 
-Here, we can also see all the data from the body of our request added to this
-`params` hash as well! Let's use that to create our bird. Exit the `byebug`
-session by typing `continue` or `c` and hit enter. Then, update your controller
-action like so:
+In this case, we can see that all the data from the body of our request has been
+added to this `params` hash! Let's use that to create our bird. Exit the
+`byebug` session by typing `continue` or `c` and hit enter. Then, update your
+controller action like so:
 
 ```rb
 def create
