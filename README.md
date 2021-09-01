@@ -192,9 +192,11 @@ end
 ```
 
 In this case, we can see that all the data from the body of our request has been
-added to this `params` hash! Let's use that to create our bird. Exit the
-`byebug` session by typing `continue` or `c` and hit enter. Then, update your
-controller action like so:
+added to this `params` hash! Any time Rails receives a request with a
+`Content-Type` of `application/json`, it will automatically load the request
+body into the `params` hash. Let's use that information to create our bird. Exit
+the `byebug` session by typing `continue` or `c` and hit enter. Then, update
+your controller action like so:
 
 ```rb
 def create
@@ -229,13 +231,18 @@ return if the new bird **wasn't** created successfully?
 
 ## Conclusion
 
-We've now seen how to handle the `create` action, and take data from the
-**body** of a request using the `params` hash. When Rails receives a request
-where the `Content-Type` is set to `application/json`, it will automatically
-load the request body into the `params` hash.
+We have now learned how to handle the `create` action. In the next lesson, we'll
+explore the `params` hash further, and talk about ways to refactor our code
+using additional features of the `params` hash.
 
-In the next lesson, we'll explore the `params` hash further, and talk about ways
-to refactor our code using additional features of the `params` hash.
+## Check For Understanding
+
+Before you move on, make sure you can answer the following questions:
+
+1. When making a `POST` request as opposed to a `GET` request, what additional
+   property needs to be passed along with the `method` and `headers`?
+2. How do we access this additional information to use it in our controller
+   action?
 
 ## Resources
 
