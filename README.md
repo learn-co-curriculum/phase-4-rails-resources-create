@@ -239,8 +239,9 @@ using additional features of the `params` hash.
 
 Before you move on, make sure you can answer the following questions:
 
-1. When making a `POST` request as opposed to a `GET` request, what additional
-   property needs to be passed along with the `method` and `headers`?
+1. When using `fetch` to make a `POST` request as opposed to a `GET` request,
+   what additional property needs to be passed along with the `method` and
+   `headers`?
 2. How do we access this additional information to use it in our controller
    action?
 
